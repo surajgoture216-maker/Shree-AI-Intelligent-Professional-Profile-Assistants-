@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+}
+
+.chat-container {
+    min-height: 100vh;
+    background: #0f0f1a;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    border-bottom: 1px solid #2d2d44;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #7f77dd;
+}
+
+.header-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.resume-btn,
+.admin-btn {
+    background: #1a1a2e;
+    color: white;
+    border: 1px solid #534ab7;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.welcome-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.profile-card {
+    margin-bottom: 30px;
+}
+
+.profile-image {
+    font-size: 60px;
+}
+
+.profile-card h2 {
+    margin-top: 10px;
+}
+
+.welcome-message h1 {
+    color: #7f77dd;
+}
+
+.suggestions {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.suggestions button {
+    background: #1a1a2e;
+    color: white;
+    border: 1px solid #534ab7;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.chat-area {
+    flex: 1;
+}
+
+.prompt-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    border-top: 1px solid #2d2d44;
+    background: #151525;
+    position: sticky;
+    bottom: 0;
+}
+
+.prompt-bar input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 16px;
+    outline: none;
+}
+
+.attach-btn,
+.send-btn {
+    background: #1a1a2e;
+    border: none;
+    color: white;
+    padding: 10px 14px;
+    border-radius: 50%;
+    cursor: pointer;
+}

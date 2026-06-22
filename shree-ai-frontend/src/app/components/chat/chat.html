@@ -1,0 +1,120 @@
+<div class="chat-container">
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">
+      SHREE AI
+    </div>
+
+    <div class="header-actions">
+      <button class="resume-btn">
+        Resume
+      </button>
+
+      <button class="admin-btn">
+        Suraj Goture
+      </button>
+    </div>
+  </header>
+
+  <!-- Welcome Section -->
+  <div class="welcome-section">
+
+    <div class="profile-card">
+      <div class="profile-image">
+        👨‍💻
+      </div>
+
+      <h2>Suraj Goture</h2>
+
+      <p>MCA Graduate</p>
+
+      <p>Java Full Stack Developer</p>
+
+      <p>AI Enthusiast</p>
+    </div>
+
+    <div class="welcome-message">
+
+      <h1>👋 Good Morning!</h1>
+
+      <p>
+        I am Shree AI, the personal AI assistant of Suraj Goture.
+      </p>
+
+      <p>
+        I can help you to know more about Suraj Goture.
+      </p>
+
+      <p>
+        How can I help you today?
+      </p>
+
+    </div>
+
+    <div class="suggestions">
+
+      <button>Tell me about Suraj</button>
+
+      <button>What are his skills?</button>
+
+      <button>Explain PDI Project</button>
+
+      <button>Why should I hire Suraj?</button>
+
+      <button>Show education</button>
+
+      <button>Show experience</button>
+
+    </div>
+
+  </div>
+
+  <!-- Chat Area -->
+ <div class="chat-area">
+
+  <div
+    *ngFor="let message of messages"
+    class="message"
+    [class.user]="message.sender === 'user'"
+    [class.ai]="message.sender === 'ai'">
+
+    <strong>
+      {{ message.sender === 'user' ? '👤 You' : '🤖 Shree AI' }}
+    </strong>
+
+    <p>
+      {{ message.content }}
+    </p>
+
+  </div>
+
+  <div *ngIf="loading" class="thinking">
+    🤖 Shree AI is thinking...
+  </div>
+
+</div>
+
+  <!-- Prompt Bar -->
+  <div class="prompt-bar">
+
+    <button class="attach-btn">
+      📎
+    </button>
+
+    <input
+  type="text"
+  [(ngModel)]="question"
+  (keyup.enter)="sendMessage()"
+  placeholder="Ask anything about Suraj..."
+>
+
+    <button
+  class="send-btn"
+  (click)="sendMessage()">
+  ➤
+</button>
+
+  </div>
+
+</div>
